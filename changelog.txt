@@ -1,0 +1,49 @@
+INSTALL:(from the python shell)
+pip install selenium
+pip install webdriver-manager
+
+
+ChromeDriver download(win32): https://chromedriver.storage.googleapis.com/index.html?path=92.0.4515.43/
+
+Make a folder in your python scrips folders (<python dir>\Scripts\YourFolderHere)
+Extract the chromedriver into that folder
+Copy this script into that folder
+Change the chrome_service=Service() below to match where you extracted chromedriver
+
+Tested only on Windows 10
+
+9/20/2021:
+added cdadl - Chrome Driver Auto Downloadder
+-> handles automatically updating to the latest chromedriver version
+
+6/11/2022
+updated screenshot logic to account for the changes to twitch leaderboard layout
+
+DATE_UNKNOWN:
+reverted changed from 6/11 - Twitched rolled back the leaderboard layout
+
+
+10/20/2022
+selenium - depricated used of calling executable_path
+selenium - Deprecated find_element_by_* and find_elements_by_*
+Updated selenium to use the new method for finding elements by their xpaths
+- removed some uneeded imports that weere not used
+- removed requirement to specify a directory for the chromedriver.exe ; it now jsut looks in the current directory
+- Changed path of screenshots
+
+1/25/2023
+5.1.2
+Streamer rebrand - twitch handle changed
+
+2023/08/28
+chromedriver updater broken, commented out
+
+2023/10/07
+Colonal rebrand - twitch handle changed
+
+12/6/2023
+Merged the Scraper and the CDADL into one.
+Chrome webdriver also changed homes, updated the update() function to account for this.
+
+Chromedriver Autoupdate v115+
+https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/119.0.6045.105/win64/chromedriver-win64.zip
